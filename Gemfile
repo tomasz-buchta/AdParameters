@@ -6,5 +6,6 @@ gem "nokogiri"
 gem "zeitwerk"
 
 group "development" do
+  gem "pry"
   gem "rubocop"
 end
