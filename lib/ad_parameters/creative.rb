@@ -1,6 +1,4 @@
 require "dry-struct"
-require "ad_parameters/types"
-require_relative "buildable"
 
 module AdParameters
   class Creative < ::Dry::Struct
