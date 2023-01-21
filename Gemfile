@@ -7,5 +7,6 @@ gem "zeitwerk"
 
 group "development" do
   gem "pry"
+  gem "rspec"
   gem "rubocop"
 end
