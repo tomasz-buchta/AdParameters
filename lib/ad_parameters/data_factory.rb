@@ -7,10 +7,10 @@ module AdParameters
     end
 
     def build
-      members = AdParameters::Creative.members
+      members = klass.members
       nodes.map do |node|
         values = members.map { |member| [member, node.attr(member)] }.to_h
-        AdParameters::Creative.new(**values)
+        klass.new(**values)
       end
     end
 
