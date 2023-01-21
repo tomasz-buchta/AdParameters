@@ -22,6 +22,6 @@ RSpec.describe AdParameters::DataFactory do
     subject(:output) { data_factory.build }
     it { expect(output.count).to eq(1) }
     it { expect(output.first).to be_a(AdParameters::Creative) }
-    it { expect(output.first).to have_attributes(id: "video-1", price: "6.4567", currency: "EUR") }
+    it { expect(output.first).to have_attributes(id: "video-1", price: 6.4567, currency: "EUR") }
   end
 end
