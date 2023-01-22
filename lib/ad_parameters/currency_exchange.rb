@@ -14,6 +14,9 @@ module AdParameters
     # This will only provide SEK,TYR,USD to EUR exchange rate
     # In real system we would also want to provide SEK <-> TYR etc. if possible
     def self.rate_for_currency(from:, to:)
+      # Try original direction - if not found try reverse
+      raise ArgumentError, "Currency not supported" unless RATES.dig(from, to) || RATES.dig(to, from)
+
       RATES.dig(from, to) || 1 / RATES.dig(to, from)
     end
 
