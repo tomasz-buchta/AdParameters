@@ -1,3 +1,11 @@
+require "dry-struct"
+
 module AdParameters
-  Placement = Data.define(:id, :floor, :currency)
+  class Placement < ::Dry::Struct
+    extend Buildable
+
+    attribute :id, Types::Coercible::String
+    attribute :floor, Types::Coercible::Float
+    attribute :currency, Types::Coercible::String
+  end
 end
