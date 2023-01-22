@@ -14,7 +14,9 @@ class XmlReader
 end
 
 def main
+  # TODO: Handle file input / STDIN
   AdParameters::Loader.run
+  # TODO: Refactor the creation
   xml_reader = XmlReader.new
   doc = xml_reader.run
   creative_nodes = doc.xpath("//Creative")

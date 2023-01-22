@@ -7,5 +7,7 @@ module AdParameters
     attribute :id, Types::Coercible::String
     attribute :price, Types::Coercible::Float
     attribute :currency, Types::Coercible::String
+    # TODO: Handle currency calculation
+    # TODO: Handle comparison with currency
   end
 end
