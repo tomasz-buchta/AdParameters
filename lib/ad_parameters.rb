@@ -1,6 +1,7 @@
 require "bundler/setup"
 require "zeitwerk"
 require "nokogiri"
+require_relative "ad_parameters/loader"
 
 module AdParameters
 end
@@ -13,7 +14,7 @@ class XmlReader
 end
 
 def main
-  Loader.run
+  AdParameters::Loader.run
   xml_reader = XmlReader.new
   doc = xml_reader.run
   creative_nodes = doc.xpath("//Creative")
