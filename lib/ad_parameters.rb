@@ -22,8 +22,8 @@ def main
   creative_nodes = doc.xpath("//Creative")
   placement_nodes = doc.xpath("//Placement")
 
-  creatives = AdParameters::DataFactory.new(AdParameters::Creative, creative_nodes).build
-  placements = AdParameters::DataFactory.new(AdParameters::Placement, placement_nodes).build
+  creatives = AdParameters::DataFactory.new(AdParameters::Entities::Creative, creative_nodes).build
+  placements = AdParameters::DataFactory.new(AdParameters::Entities::Placement, placement_nodes).build
 
   mapped = placements.map{ |placement| [placement, AdParameters::MatchCreativesToPlacement.new(creatives:, placement:).call] }.to_h
 end

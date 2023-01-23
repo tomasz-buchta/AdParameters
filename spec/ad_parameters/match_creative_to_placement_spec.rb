@@ -1,9 +1,9 @@
 require "spec_helper"
 
 RSpec.describe AdParameters::MatchCreativesToPlacement do
-  let(:placement) { AdParameters::Placement.new(floor: 10, currency: "EUR", id: "plc-1") }
-  let(:matching_creative) { AdParameters::Creative.new(price: 15, currency: "EUR", id: "video-1") }
-  let(:not_matching_creative) { AdParameters::Creative.new(price: 5, currency: "EUR", id: "video-2") }
+  let(:placement) { AdParameters::Entities::Placement.new(floor: 10, currency: "EUR", id: "plc-1") }
+  let(:matching_creative) { AdParameters::Entities::Creative.new(price: 15, currency: "EUR", id: "video-1") }
+  let(:not_matching_creative) { AdParameters::Entities::Creative.new(price: 5, currency: "EUR", id: "video-2") }
 
   describe "#call" do
     subject(:matching_creatives) { described_class.new(placement:, creatives: [matching_creative, not_matching_creative]).call }
