@@ -24,6 +24,8 @@ def main
 
   creatives = AdParameters::DataFactory.new(AdParameters::Creative, creative_nodes).build
   placements = AdParameters::DataFactory.new(AdParameters::Placement, placement_nodes).build
+
+  mapped = placements.map{ |placement| [placement, AdParameters::MatchCreativesToPlacement.new(creatives:, placement:).call] }.to_h
 end
 
 # Run the main

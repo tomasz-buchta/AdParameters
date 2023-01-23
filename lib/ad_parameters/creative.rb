@@ -7,7 +7,9 @@ module AdParameters
     attribute :id, Types::Coercible::String
     attribute :price, Types::Coercible::Decimal
     attribute :currency, Types::Coercible::String
-    # TODO: Handle currency calculation
-    # TODO: Handle comparison with currency
+    # TODO: Avoid duplicating this method
+    def price_to_money
+      AdParameters::Money.new(amount: price, currency:)
+    end
   end
 end

@@ -1,5 +1,7 @@
 module AdParameters
   Money = Data.define(:amount, :currency) do
+    include Comparable
+
     def <=>(other)
       return amount <=> other.amount if currency == other.currency
 
