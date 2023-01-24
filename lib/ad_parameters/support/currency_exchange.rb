@@ -3,7 +3,8 @@ require "bigdecimal"
 module AdParameters
   module Support
     class CurrencyExchange
-      # TODO: Read this from configuration of sorts
+      # In real application this would be read from configuration or reach out to
+      # external system to get these rates
       RATES = {
         "EUR" => {
           "SEK" => BigDecimal("11.19"), # From google
