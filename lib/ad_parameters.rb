@@ -26,6 +26,8 @@ def main
   placements = AdParameters::DataFactory.new(AdParameters::Entities::Placement, placement_nodes).build
 
   mapped = placements.map{ |placement| [placement, AdParameters::MatchCreativesToPlacement.new(creatives:, placement:).call] }.to_h
+
+  require 'pry'; binding.pry
 end
 
 # Run the main

@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package FYBER.userconfiguration;
+
+import "placement.proto";
+
+message PlacementSeq{
+  repeated Placement placement = 1;
+};
