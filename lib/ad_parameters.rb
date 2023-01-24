@@ -29,7 +29,7 @@ def main
   mapped = placements.map{ |placement| [placement, AdParameters::MatchCreativesToPlacement.new(creatives:, placement:).call] }.to_h
   # And to serialize them
   seq = mapped.map do |placement, creatives|
-    creatives_protobufs = creatives.map{ |c| FYBER::Userconfiguration::Creative.new(id: c.id, price: c.price.to_f) }
+    creatives_protobufs = creatives.map{ |c| FYBER::Userconfiguration::Creative.new(id: c.id, price: c.price_to_money.to_euro_amount.to_f) }
     FYBER::Userconfiguration::Placement.new(id: placement.id, creative: creatives_protobufs)
   end
   placement_seq = FYBER::Userconfiguration::PlacementSeq.new(placement: seq)
