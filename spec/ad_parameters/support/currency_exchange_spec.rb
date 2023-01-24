@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe AdParameters::CurrencyExchange do
+RSpec.describe AdParameters::Support::CurrencyExchange do
   subject { described_class }
 
   describe ".rate_for_currency" do

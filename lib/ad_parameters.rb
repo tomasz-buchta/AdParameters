@@ -1,7 +1,7 @@
 require "bundler/setup"
 require "zeitwerk"
 require "nokogiri"
-require_relative "ad_parameters/loader"
+require_relative "ad_parameters/support/loader"
 
 class XmlReader
   def self.read(file_path)
@@ -11,7 +11,7 @@ end
 
 def main
   # TODO: Handle file input / STDIN
-  AdParameters::Loader.run
+  AdParameters::Support::Loader.run
   doc = XmlReader.read(ARGV[0])
   creative_nodes = doc.xpath("//Creative")
   placement_nodes = doc.xpath("//Placement")

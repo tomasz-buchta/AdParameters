@@ -10,7 +10,7 @@ module AdParameters
 
     # Naive approach - perform all money comparisons in EUR
     def to_euro_amount
-      CurrencyExchange.convert(amount:, from: currency, to: "EUR")
+      Support::CurrencyExchange.convert(amount:, from: currency, to: "EUR")
     end
   end
 end
