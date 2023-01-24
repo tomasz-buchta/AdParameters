@@ -4,9 +4,9 @@ require_relative "ad_parameters/support/loader"
 
 def main
   AdParameters::Support::Loader.run
-  doc = AdParameters::Support::XmlReader.read(ARGV[0])
-  creative_nodes = doc.xpath("//Creative")
-  placement_nodes = doc.xpath("//Placement")
+  reader = AdParameters::Support::XmlReader.new(ARGV[0])
+  creative_nodes = reader.creative_nodes
+  placement_nodes = reader.placement_nodes
 
   creatives = AdParameters::DataFactory.new(AdParameters::Entities::Creative, creative_nodes).build
   placements = AdParameters::DataFactory.new(AdParameters::Entities::Placement, placement_nodes).build
