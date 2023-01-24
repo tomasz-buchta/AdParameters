@@ -1,0 +1,9 @@
+syntax = "proto2";
+
+package FYBER.userconfiguration;
+
+import "creative.proto";
+
+message CreativeSeq{
+  repeated Creative creative = 1;
+};

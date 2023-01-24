@@ -4,7 +4,9 @@ source "https://rubygems.org"
 
 gem "dry-struct"
 gem "dry-types"
+gem "google-protobuf"
 gem "nokogiri"
+gem "protobuf"
 gem "zeitwerk"
 
 group "development" do
