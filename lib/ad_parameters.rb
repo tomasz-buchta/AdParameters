@@ -4,18 +4,15 @@ require "nokogiri"
 require_relative "ad_parameters/loader"
 
 class XmlReader
-  def run
-    file_path = './example.xml'
-    doc = File.open(file_path) { |f| Nokogiri::XML(f) }
+  def self.read(file_path)
+    File.open(file_path) { |f| Nokogiri::XML(f) }
   end
 end
 
 def main
   # TODO: Handle file input / STDIN
   AdParameters::Loader.run
-  # TODO: Refactor the creation
-  xml_reader = XmlReader.new
-  doc = xml_reader.run
+  doc = XmlReader.read(ARGV[0])
   creative_nodes = doc.xpath("//Creative")
   placement_nodes = doc.xpath("//Placement")
 
