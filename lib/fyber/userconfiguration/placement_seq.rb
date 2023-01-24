@@ -3,10 +3,8 @@
 
 require 'google/protobuf'
 
-require 'placement_pb'
-
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_file("placement_seq.proto", :syntax => :proto2) do
+  add_file("placement_seq.proto", syntax: :proto2) do
     add_message "FYBER.userconfiguration.PlacementSeq" do
       repeated :placement, :message, 1, "FYBER.userconfiguration.Placement"
     end

@@ -3,10 +3,8 @@
 
 require 'google/protobuf'
 
-require 'creative_pb'
-
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_file("creative_seq.proto", :syntax => :proto2) do
+  add_file("creative_seq.proto", syntax: :proto2) do
     add_message "FYBER.userconfiguration.CreativeSeq" do
       repeated :creative, :message, 1, "FYBER.userconfiguration.Creative"
     end
