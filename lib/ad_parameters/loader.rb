@@ -1,5 +1,6 @@
 require "zeitwerk"
 
+# Has to be defined here since its used in namespace
 module FYBER
 end
 
