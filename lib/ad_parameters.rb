@@ -3,9 +3,6 @@ require "zeitwerk"
 require "nokogiri"
 require_relative "ad_parameters/loader"
 
-module AdParameters
-end
-
 class XmlReader
   def run
     file_path = './example.xml'
