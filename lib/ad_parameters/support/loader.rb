@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "zeitwerk"
 
 # Has to be defined here since its used in namespace

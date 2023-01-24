@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Will build data object from xml node set
 module AdParameters
   class DataFactory

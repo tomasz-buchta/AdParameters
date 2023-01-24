@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "bundler/setup"
 require "zeitwerk"
 require_relative "ad_parameters/support/loader"

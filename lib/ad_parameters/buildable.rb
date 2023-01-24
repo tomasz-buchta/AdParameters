@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AdParameters
   module Buildable
     def members

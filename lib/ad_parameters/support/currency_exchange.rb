@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "bigdecimal"
 
 module AdParameters
@@ -12,7 +14,7 @@ module AdParameters
           "USD" => BigDecimal("1.13"),
           "EUR" => BigDecimal("1.0")
         }
-      }
+      }.freeze
 
       # This will only provide SEK,TYR,USD to EUR exchange rate
       # In real system we would also want to provide SEK <-> TYR etc. if possible

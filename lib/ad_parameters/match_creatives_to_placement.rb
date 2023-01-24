@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AdParameters
   class MatchCreativesToPlacement
     def initialize(placement:, creatives:)

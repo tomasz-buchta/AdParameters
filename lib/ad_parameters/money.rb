@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module AdParameters
   Money = Data.define(:amount, :currency) do
     include Comparable
