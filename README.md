@@ -17,3 +17,7 @@ protoc -I ./lib/ad_parameters/definitions/ --ruby_out ./lib/fyber/userconfigurat
 Install required gems with `bundle install`
 
 ruby lib/ad_parameters example.xml
+
+
+## Task description
+Find original task description in backend_challenge.pdf - beware the quotations are wrong in pdf file.(Change them to `""` after copy-pasting)
